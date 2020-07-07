@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/error_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PopUpTab">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_1"
+        android:background="#FAFAFA"
+        android:layout_below="@id/pbar2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:layout_marginTop="-2dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffdab2"
+        android:progressTint="@color/colorAccent"
+        android:id="@+id/pbar2"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:max="100"
+        android:progress="20" />
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:background="@color/loading_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/gifview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/loading" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
